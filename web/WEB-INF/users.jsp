@@ -139,9 +139,9 @@
                         <br>
                         <input type="hidden" name="action" value="add" />
                         <select name="role">
-                            <option value="1" <c:if test="${user.role.id == 1}">selected</c:if>>System Admin</option>
-                            <option value="2" <c:if test="${user.role.id == 2}">selected</c:if>>Regular User</option>
-                            <option value="3" <c:if test="${user.role.id == 3}">selected</c:if>>Company Admin</option>
+                            <option value="1" <c:if test="${user.role.roleId == 1}">selected</c:if>>System Admin</option>
+                            <option value="2" <c:if test="${user.role.roleId == 2}">selected</c:if>>Regular User</option>
+                            <option value="3" <c:if test="${user.role.roleId == 3}">selected</c:if>>Company Admin</option>
                             </select>
                             <br>
                             <input type="submit" value="Save" />
@@ -165,7 +165,7 @@
                             <td>${user.email}</td>
                             <td>${user.firstName}</td>
                             <td>${user.lastName}</td>
-                            <td>${user.role.name}</td>
+                            <td>${user.role.roleName}</td>
                             
                             <c:url value="users" var="editurl">
                             <c:param name="action" value="edit"/>
@@ -195,9 +195,9 @@
                         <input type="hidden" name="email" value="${editUser.email}" />
                         <input type="hidden" name="action" value="update" />
                         <select name="role">
-                            <option value="1" <c:if test="${editUser.role.id == 1}">selected</c:if>>System Admin</option>
-                            <option value="2" <c:if test="${editUser.role.id == 2}">selected</c:if>>Regular User</option>
-                            <option value="3" <c:if test="${editUser.role.id == 3}">selected</c:if>>Company Admin</option>
+                            <option value="1" <c:if test="${editUser.role.roleId == 1}">selected</c:if>>System Admin</option>
+                            <option value="2" <c:if test="${editUser.role.roleId== 2}">selected</c:if>>Regular User</option>
+                            <option value="3" <c:if test="${editUser.role.roleId == 3}">selected</c:if>>Company Admin</option>
                         </select>
                         <br>
                         <input type="submit" value="Update" />

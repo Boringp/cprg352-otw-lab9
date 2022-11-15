@@ -18,4 +18,5 @@ public class RoleService {
         List<Role> roles = roleDB.getAll();
         return roles;
     }
+    
 }

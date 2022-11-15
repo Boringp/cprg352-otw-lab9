@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/Lab07_Solution">
-    <Resource
-        name="jdbc/userdb"
-        url="jdbc:mysql://localhost:3306/userdb"
-        username="root"
-        password="password"
-        maxActive="100"
-        maxIdle="30"
-        maxWait="10000"
-        logAbandoned="true"
-        removeAbandoned="true"
-        removeAbandonedTimeout="60"
-        auth="Container"
-        type="javax.sql.DataSource"
-        driverClassName="com.mysql.jdbc.Driver"
-    />
+<Context path="/lab_9">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/userdb" password="password" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/userdb" username="root"/>
 </Context>

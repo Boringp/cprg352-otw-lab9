@@ -7,6 +7,8 @@ package servlets;
 
 import java.util.List;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -105,8 +107,8 @@ public class UserServlet extends HttpServlet {
                     break;
             }
 
-        } catch (Exception e) {
-            request.setAttribute("message", "Could not perform action");
+        } catch (Exception ex) {
+            Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
         
          try {
